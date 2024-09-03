@@ -24,12 +24,12 @@ This project implements an AI agent to play the classic Snake game using reinfor
     ```
 
 3. **Activate the virtual environment:**
-On Windows:
+- On Windows:
 
    ```sh
    .\env\Scripts\activate
    ```
-On macOS/Linux:
+- On macOS/Linux:
 
    ```sh
    source env/bin/activate
