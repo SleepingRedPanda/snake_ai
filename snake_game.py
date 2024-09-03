@@ -77,13 +77,13 @@ class SnakeGameAI:
         game_over = False
         if self.is_collision() or self.frame_iteration > 100 * len(self.snake):
             game_over = True
-            reward -= 10
+            reward = -10
             return reward, game_over, self.score
 
         # 4. place new food or just move
         if self.head == self.food:
             self.score += 1
-            reward += 10
+            reward = 10
             self._place_food()
         else:
             self.snake.pop()
@@ -122,17 +122,18 @@ class SnakeGameAI:
     def _move(self, action):
         # [straight, right, left]
 
-        clockwise = [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]
-        idx = clockwise.index(self.direction)
+        clock_wise = [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]
+        idx = clock_wise.index(self.direction)
 
         if np.array_equal(action, [1, 0, 0]):
-            new_dir = clockwise[idx]  # no change
+            new_dir = clock_wise[idx]  # no change
         elif np.array_equal(action, [0, 1, 0]):
             next_idx = (idx + 1) % 4
-            new_dir = clockwise[next_idx]  # right turn r -> d -> l -> u
+            new_dir = clock_wise[next_idx]  # right turn r -> d -> l -> u
         else:  # [0, 0, 1]
-            next_idx = (idx + 1) % 4
-            new_dir = clockwise[next_idx]  # left turn r -> u -> l -> d
+            next_idx = (idx - 1) % 4
+            new_dir = clock_wise[next_idx]  # left turn r -> u -> l -> d
+
         self.direction = new_dir
 
         x = self.head.x
