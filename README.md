@@ -21,7 +21,7 @@ This project implements an AI agent to play the classic Snake game using reinfor
 
    ```sh
    python -m venv env
-   ```
+    ```
 
 3. **Activate the virtual environment:**
 On Windows:
