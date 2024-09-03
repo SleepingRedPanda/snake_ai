@@ -47,9 +47,9 @@ On macOS/Linux:
 
 To run the game, run the following command:
 
-    ```sh
-    python agent.py
-    ```
+   ```sh
+   python agent.py
+   ```
 
 ## Project Structure
 
