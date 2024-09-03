@@ -24,12 +24,12 @@ This project implements an AI agent to play the classic Snake game using reinfor
    ```
 
 3. **Activate the virtual environment:**
-- On Windows:
+On Windows:
 
    ```sh
    .\env\Scripts\activate
    ```
-- On macOS/Linux:
+On macOS/Linux:
 
    ```sh
    source env/bin/activate
@@ -45,7 +45,7 @@ This project implements an AI agent to play the classic Snake game using reinfor
 
 **Run the game:**
 
-    To run the game, run the following command:
+To run the game, run the following command:
 
     ```sh
     python agent.py
